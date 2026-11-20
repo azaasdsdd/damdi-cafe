@@ -36,6 +36,24 @@
         h2 {
             font-size: 25px;
             font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .address {
+            color: #927D69;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .map-button {
+            display: inline-block;
+            background: #493528;
+            color: white;
+            text-decoration: none;
+            padding: 12px 18px;
+            border-radius: 12px;
+            margin-top: 5px;
+            font-size: 14px;
         }
 
         h1 {
@@ -91,15 +109,28 @@
 
         <h2>Dәмді Cafe</h2>
 
+        <p class="address">
+            📍 Астана, Мәңгілік Ел даңғылы, С1
+        </p>
+
+        <a class="map-button"
+           href="https://2gis.kz/astana/geo/70030077204675347/71.418153,51.090953"
+           target="_blank">
+            2GIS арқылы мекенжайды көру →
+        </a>
+
         <h1>Іздеу</h1>
 
         <p>Өзіңізге керекті тағамды табыңыз</p>
 
         <div class="search">
-            <input type="text" id="searchInput"
+            <input type="text"
+                   id="searchInput"
                    placeholder="Тағам іздеу...">
 
-            <button onclick="searchFood()">Іздеу →</button>
+            <button onclick="searchFood()">
+                Іздеу →
+            </button>
         </div>
 
     </div>
@@ -115,5 +146,6 @@
             }
         }
     </script>
+
 </body>
 </html>
