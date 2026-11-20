@@ -1,113 +1,109 @@
-<!DOCTYPE html>
-<html lang="kk">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dәмді Cafe</title>
+<style>
+    * {
+        box-sizing: border-box;
+    }
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+    body {
+        margin: 0;
+        background: #F5F0E8;
+        font-family: Arial, sans-serif;
+        color: #39291F;
+    }
 
-        body {
-            margin: 0;
-            background: #F5F0E8;
-            font-family: Arial, sans-serif;
-            color: #39291F;
-        }
+    .app {
+        max-width: 600px;
+        margin: auto;
+        padding: 35px 22px;
+        min-height: 100vh;
+    }
 
-        .app {
-            max-width: 600px;
-            margin: auto;
-            padding: 35px 22px;
-            min-height: 100vh;
-        }
+    .cafe-photo {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 18px;
+        margin-bottom: 20px;
+    }
 
-        h2 {
-            font-size: 25px;
-            font-weight: 600;
-        }
+    h2 {
+        font-size: 25px;
+        font-weight: 600;
+    }
 
-        h1 {
-            font-size: 38px;
-            margin-top: 110px;
-        }
+    h1 {
+        font-size: 38px;
+        margin-top: 70px;
+    }
 
-        p {
-            color: #927D69;
-            font-size: 15px;
-        }
+    p {
+        color: #927D69;
+        font-size: 15px;
+    }
 
-        .search {
-            display: flex;
-            background: white;
-            padding: 8px;
-            border-radius: 16px;
-            margin-top: 30px;
-        }
+    .search {
+        display: flex;
+        background: white;
+        padding: 8px;
+        border-radius: 16px;
+        margin-top: 30px;
+    }
 
-        input {
-            flex: 1;
-            min-width: 0;
-            border: none;
-            outline: none;
-            padding: 12px;
-            font-size: 16px;
-            background: transparent;
-        }
+    input {
+        flex: 1;
+        min-width: 0;
+        border: none;
+        outline: none;
+        padding: 12px;
+        font-size: 16px;
+        background: transparent;
+    }
 
-        button {
-            background: #493528;
-            color: white;
-            border: none;
-            border-radius: 12px;
-            padding: 12px 18px;
-            font-size: 14px;
-            cursor: pointer;
-        }
+    button {
+        background: #493528;
+        color: white;
+        border: none;
+        border-radius: 12px;
+        padding: 12px 18px;
+        font-size: 14px;
+        cursor: pointer;
+    }
 
-        button:hover {
-            background: #674936;
-        }
-    </style>
-</head>
+    button:hover {
+        background: #674936;
+    }
+</style>
+    <img src="photo_5188380868383284298_y.jpg"
+         alt="Dәмді Cafe"
+         class="cafe-photo">
 
-<body>
+    <h2>Dәмді Cafe</h2>
 
-    <div class="app">
+    <h1>Іздеу</h1>
 
-        <h2>Dәмді Cafe</h2>
+    <p>Өзіңізге керекті тағамды табыңыз</p>
 
-        <h1>Іздеу</h1>
+    <div class="search">
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Тағам іздеу..."
+        >
 
-        <p>Өзіңізге керекті тағамды табыңыз</p>
-
-        <div class="search">
-            <input
-                type="text"
-                id="searchInput"
-                placeholder="Тағам іздеу..."
-            >
-
-            <button onclick="searchFood()">
-                Іздеу →
-            </button>
-        </div>
-
+        <button onclick="searchFood()">
+            Іздеу →
+        </button>
     </div>
 
-    <script>
-        function searchFood() {
-            let value = document.getElementById("searchInput").value.trim();
+</div>
 
-            if (value === "") {
-                alert("Тағам атауын жазыңыз!");
-            } else {
-                alert("Сіз іздедіңіз: " + value);
-            }
+<script>
+    function searchFood() {
+        let value = document.getElementById("searchInput").value.trim();
+
+        if (value === "") {
+            alert("Тағам атауын жазыңыз!");
+        } else {
+            alert("Сіз іздедіңіз: " + value);
         }
-    </script>
-
-</body>
-</html>
+    }
+</script>
